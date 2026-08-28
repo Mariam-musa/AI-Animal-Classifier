@@ -1300,15 +1300,25 @@ Better mobile responsiveness
 
 Accessibility improvements
 
-📸 Demo
-
-
+## 📸 Demo
 
 The application provides an interactive interface where users can upload an animal image and receive:
 
+- 🐾 Animal classification
+- 📊 Prediction confidence
+- 🤖 AI-generated animal description
 
-![AI Animal Classifier Demo](screenshots/demo.png)
+### 🐱 Cat Classification
 
+<p align="center">
+  <img src="screenshots/demo.png" alt="AI Animal Classifier - Cat Prediction" width="850">
+</p>
+
+### 🐶 Dog Classification
+
+<p align="center">
+  <img src="screenshots/dog-demo.png" alt="AI Animal Classifier - Dog Prediction" width="850">
+</p>
 
 ⚠️ Important Notes
 
