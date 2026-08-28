@@ -30,7 +30,7 @@ The application provides an interactive interface where users can upload an anim
 
 <p align="center">
   <img
-    src="screenshots/demo.png"
+    src="screenshots/cat-demo.png"
     alt="AI Animal Classifier - Cat prediction"
     width="850"
   >
