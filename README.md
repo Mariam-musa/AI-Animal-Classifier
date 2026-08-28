@@ -1307,30 +1307,8 @@ Accessibility improvements
 The application provides an interactive interface where users can upload an animal image and receive:
 
 
+![AI Animal Classifier Demo](screenshots/demo.png)
 
-┌───────────────────────────────┐
-
-│       Uploaded Image          │
-
-├───────────────────────────────┤
-
-│                               │
-
-│          🐱                   │
-
-│                               │
-
-├───────────────────────────────┤
-
-│ Prediction: Cat               │
-
-│ Confidence: 99.99%            │
-
-│                               │
-
-│ AI-generated description      │
-
-└───────────────────────────────┘
 
 ⚠️ Important Notes
 
