@@ -1,0 +1,31 @@
+.confidence-ring {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  flex-shrink: 0;
+}
+
+.confidence-ring__value {
+  transition: stroke-dashoffset 0.9s var(--ease);
+}
+
+.confidence-ring__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+  font-family: var(--font-mono);
+}
+
+.confidence-ring__number {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.confidence-ring__percent {
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+}

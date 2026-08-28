@@ -1,0 +1,112 @@
+/* =========================================================
+   Design tokens
+   AI Animal Classifier — computer vision product UI
+   ========================================================= */
+:root {
+  /* Color: sophisticated neutral surface + one strong accent */
+  --color-bg: #F6F7F5;
+  --color-surface: #FFFFFF;
+  --color-surface-sunken: #F0F1EE;
+  --color-border: #E1E3DE;
+  --color-border-strong: #C9CCC5;
+
+  --color-text-primary: #12151A;
+  --color-text-secondary: #565C63;
+  --color-text-tertiary: #8A8F94;
+
+  --color-accent: #2F5EFF;
+  --color-accent-dim: #E8ECFF;
+  --color-accent-ink: #14204D;
+
+  --color-success: #1D8A4A;
+  --color-success-dim: #E4F5EA;
+  --color-warning: #B4790A;
+  --color-warning-dim: #FBF0DD;
+  --color-danger: #C4351E;
+  --color-danger-dim: #FBE9E5;
+
+  /* Type */
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Layout */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --max-width: 1180px;
+
+  --shadow-sm: 0 1px 2px rgba(18, 21, 26, 0.05);
+  --shadow-md: 0 4px 16px rgba(18, 21, 26, 0.06), 0 1px 3px rgba(18, 21, 26, 0.05);
+  --shadow-lg: 0 16px 40px rgba(18, 21, 26, 0.10), 0 2px 8px rgba(18, 21, 26, 0.06);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(18,21,26,0.045) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,121 @@
+.classifier-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px 96px;
+  scroll-margin-top: 90px;
+}
+
+.classifier-section__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* About / pipeline section */
+.about-section {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface-sunken);
+}
+
+.about-section__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 88px 32px;
+  scroll-margin-top: 90px;
+}
+
+.about-section__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.about-section__inner h2 {
+  margin-top: 14px;
+  font-size: 30px;
+  max-width: 560px;
+}
+
+.pipeline {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.pipeline__step {
+  padding: 24px 22px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease);
+}
+
+.pipeline__step:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.pipeline__index {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-accent);
+}
+
+.pipeline__step h4 {
+  margin-top: 14px;
+  font-size: 15.5px;
+}
+
+.pipeline__step p {
+  margin-top: 8px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+}
+
+@media (max-width: 900px) {
+  .classifier-section__grid {
+    grid-template-columns: 1fr;
+  }
+  .pipeline {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .classifier-section {
+    padding: 0 20px 64px;
+  }
+  .about-section__inner {
+    padding: 56px 20px;
+  }
+  .pipeline {
+    grid-template-columns: 1fr;
+  }
+  .footer__inner {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    padding: 22px 20px;
+  }
+}

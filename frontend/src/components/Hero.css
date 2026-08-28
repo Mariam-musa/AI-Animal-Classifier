@@ -1,0 +1,205 @@
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 72px 32px 56px;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: 18px;
+}
+
+.hero__headline {
+  font-size: 52px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.hero__subtitle {
+  margin-top: 20px;
+  max-width: 460px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero__stat-value {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.hero__stat-label {
+  font-size: 12.5px;
+  color: var(--color-text-tertiary);
+}
+
+.hero__stat-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--color-border-strong);
+}
+
+/* Signature visual: a "viewfinder" reticle, echoing an object-detection
+   bounding box locking onto its subject. */
+.hero__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.viewfinder {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, #12151A 0%, #1B2030 100%);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.viewfinder__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.viewfinder__corner {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border: 2.5px solid var(--color-accent);
+}
+
+.viewfinder__corner--tl {
+  top: 22px;
+  left: 22px;
+  border-right: none;
+  border-bottom: none;
+  border-top-left-radius: 6px;
+}
+.viewfinder__corner--tr {
+  top: 22px;
+  right: 22px;
+  border-left: none;
+  border-bottom: none;
+  border-top-right-radius: 6px;
+}
+.viewfinder__corner--bl {
+  bottom: 22px;
+  left: 22px;
+  border-right: none;
+  border-top: none;
+  border-bottom-left-radius: 6px;
+}
+.viewfinder__corner--br {
+  bottom: 22px;
+  right: 22px;
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 6px;
+}
+
+.viewfinder__scanline {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  box-shadow: 0 0 12px 1px rgba(47, 94, 255, 0.7);
+  animation: scan 3.2s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0%, 100% { top: 26%; opacity: 0.9; }
+  50% { top: 74%; opacity: 0.5; }
+}
+
+.viewfinder__tag {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
+}
+
+.viewfinder__tag b {
+  color: #ffffff;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.viewfinder__tag--dog {
+  bottom: 44px;
+  left: 44px;
+  border-color: rgba(47, 94, 255, 0.5);
+  color: #C7D4FF;
+}
+
+.viewfinder__tag--cat {
+  top: 44px;
+  right: 44px;
+  opacity: 0.55;
+}
+
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+  .hero__visual {
+    order: -1;
+  }
+  .viewfinder {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  .hero__headline {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 48px 20px 40px;
+  }
+  .hero__headline {
+    font-size: 34px;
+  }
+  .hero__stats {
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+}
