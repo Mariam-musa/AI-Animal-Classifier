@@ -1308,16 +1308,16 @@ The application provides an interactive interface where users can upload an anim
 - 📊 Prediction confidence
 - 🤖 AI-generated animal description
 
-### 🐱 Cat Classification
+### 🐱 Cat Prediction
 
 <p align="center">
-  <img src="screenshots/demo.png" alt="AI Animal Classifier - Cat Prediction" width="850">
+  <img src="screenshots/demo.png" alt="Cat Prediction" width="850">
 </p>
 
-### 🐶 Dog Classification
+### 🐶 Dog Prediction
 
 <p align="center">
-  <img src="screenshots/dog-demo.png" alt="AI Animal Classifier - Dog Prediction" width="850">
+  <img src="screenshots/dog-demo.png" alt="Dog Prediction" width="850">
 </p>
 
 ⚠️ Important Notes
