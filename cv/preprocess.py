@@ -10,9 +10,6 @@ import glob
 cat_images = glob.glob("dataset/Cat/*.jpg")
 dog_images = glob.glob("dataset/Dog/*.jpg")
 
-# print(f"Number of cat images: {len(cat_images)}")
-# print(f"Number of dog images: {len(dog_images)}")
-
 
 # =========================
 # 2. Resize Images
@@ -49,9 +46,6 @@ for dog in dog_images:
 cat_array = np.array(resized_cat_images)
 dog_array = np.array(resized_dog_images)
 
-# print(f"Cat array shape: {cat_array.shape}")
-# print(f"Dog array shape: {dog_array.shape}")
-
 
 # =========================
 # 4. Normalization
@@ -86,7 +80,3 @@ indices = np.random.permutation(len(x))
 
 x = x[indices]
 y = y[indices]
-
-
-# print(f"X shape: {x.shape}")
-# print(f"Y shape: {y.shape}")
