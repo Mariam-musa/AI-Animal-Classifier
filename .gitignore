@@ -10,6 +10,9 @@ dist/
 # Environment / secrets
 .env
 
+# Datasets / large files
+dataset/
+
 # IDE / OS
 .vscode/
 .DS_Store
